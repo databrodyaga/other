@@ -1,0 +1,12 @@
+numpy==1.26.4
+pandas==1.5.3
+requests
+joblib
+tqdm
+scikit-learn==1.2.2
+catboost==1.2.7
+torch==2.6.0
+transformers==4.54.0
+spacy==3.6.1
+
+https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.6.0/ru_core_news_sm-3.6.0-py3-none-any.whl

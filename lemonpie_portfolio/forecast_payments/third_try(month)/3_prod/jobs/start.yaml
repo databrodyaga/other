@@ -1,0 +1,17 @@
+name: start
+desc: forecast_payments_prod
+cmd: python third_try_vanil_catboost.py
+
+env:
+  python:
+    type: manual
+    dependencies: requirements.txt
+  variables:
+      API_PROFILE: prod
+
+cloud-instance-type: gt4i.1
+
+inputs:
+  - monthly_forecast_prod.log
+outputs:
+  - monthly_forecast_prod.log

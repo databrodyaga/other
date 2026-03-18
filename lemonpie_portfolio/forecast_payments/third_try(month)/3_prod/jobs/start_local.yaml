@@ -1,0 +1,24 @@
+name: start
+desc: forecast_payments_prod
+cmd: python third_try_vanil_catboost.py
+
+env:
+  python:
+    type: manual
+    dependencies: requirements.txt
+  variables:
+      API_PROFILE: prod
+
+cloud-instance-type: gt4i.1
+
+inputs:
+  - forecast_all_next_month.csv
+  - forecasts_catboost_monthly.csv
+  - monthly_forecast_prod.log
+outputs:
+  - actual_monthly_payments.csv
+  - forecast_all_next_month.csv
+  - forecasts_catboost_monthly.csv
+  - monthly_forecast_prod.log
+  - data_final.csv
+  - data_full.parquet
