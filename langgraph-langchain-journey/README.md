@@ -1,49 +1,31 @@
-## LangGraph + LangChain Journey
+# LangGraph + LangChain Journey
 
-A small project created to explore the basics of LangGraph, LangChain, and LLM-powered workflows.
+A collection of small projects created while learning LangGraph, LangChain, and LLM-based applications.
 
-### Project
+### 1. Chatbot
 
-The application classifies job descriptions using an LLM and a LangGraph workflow.
+A minimal asynchronous chatbot built with LangGraph to explore graph-based conversational workflows and create a reusable LLM wrapper.
 
-For each input description it predicts:
+### 2. Job Description Classifier
 
-* Job type
-    * permanent job
-    * project job
-* Profession category
-* Search type
-    * looking for work
-    * looking for employee
+A LangGraph workflow that classifies job descriptions using an LLM.
 
-### Workflow
+For each description it predicts:
 
-```text
+- Job type
+  - permanent job
+  - project job
+- Profession category
+- Search type
+  - looking for work
+  - looking for employee
 
-Description
-    │
-    ▼
-Job Type
-    │
-    ▼
-Category
-    │
-    ▼
-Search Type
-    │
-    ▼
-Result
-
-```
-
-Each step is implemented as an individual LangGraph node that updates the shared graph state.
+Each prediction step is implemented as an individual LangGraph node that updates the shared graph state.
 
 ### Tested models
 
-* Local Qwen (Ollama)
-* Groq API (Llama)
-* Google Gemini API
+- Qwen (Ollama)
+- Llama (Groq API)
+- Gemini (Google AI)
 
-The implementation was intentionally kept provider-agnostic, making it easy to switch between different LLM backends.
-
-Rather than treating knowledge of a specific framework as a prerequisite, I wanted to see how quickly a working solution could be built by learning the fundamentals and applying them in practice.
+The implementation is provider-agnostic, making it easy to switch between different LLM backends.
