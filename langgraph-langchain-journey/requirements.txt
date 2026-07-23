@@ -1,0 +1,13 @@
+langgraph
+langchain
+langchain-ollama
+langchain-openai
+langchain_google_genai
+langchain_groq
+langchain_mcp_adapters
+pandas
+ollama
+openai
+mcp
+ipykernel
+ipywidgets
